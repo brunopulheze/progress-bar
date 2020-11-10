@@ -1,0 +1,234 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+main {
+    width: 70vw;
+    height: 60vh;
+    background-color: rgb(241, 220, 241);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bg-color-dark 4s infinite;
+    overflow: hidden;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 80px;
+}
+
+#stars {
+    background-image: url('./assets/stars.png');
+    background-size: contain;
+    background-position-y: -100px;
+    animation: stars 4s infinite;
+}
+
+#animation>.image {
+    margin: 100px auto;
+    animation: images 20s infinite;
+}
+
+.progress-bar-container {
+    margin: 100px auto;
+    width: 500px;
+    text-align: center;
+}
+
+.progress2 {
+    padding: 6px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar2 {
+    height: 18px;
+    border-radius: 30px;
+    background-image:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar2 {
+    width: 85%;
+    background-color: #EF476F;
+    animation: progressAnimation 20s infinite;
+}
+
+@keyframes bg-color-dark {
+    0% {
+        background-color: rgb(20, 8, 20);
+    }
+
+    50% {
+        background-color: rgb(17, 17, 36);
+    }
+
+    100% {
+        background-color: rgb(22, 11, 22);
+    }
+
+}
+
+@keyframes stars {
+    0% {
+        transform: translate3d(2px, 2px, 0);
+    }
+
+    25% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(1px, 1px, 0);
+    }
+
+    75% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(2px, 2px, 0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes images {
+    0% {
+        background-image: url('./assets/001.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translateX(1000px);
+    }
+
+    9% {
+        background-image: url('./assets/001.png');
+        transform: scale(1);
+    }
+
+    10% {
+        background-image: url('./assets/001.png');
+        transform: scale(1.2);
+    }
+
+    13% {
+        background-image: url('./assets/001.png');
+        transform: scale(1);
+    }
+
+    15% {
+        background-image: url('./assets/001.png');
+        transform: scale(1.2);
+    }
+
+    18% {
+        background-image: url('./assets/001.png');
+        background-repeat: none;
+        transform: scale(1);
+    }
+
+    30% {
+        background-image: url('./assets/001.png');
+        transform: translateX(-1000px);
+    }
+
+    31% {
+        background-image: url('./assets/002.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translateX(-1000px);
+    }
+
+    40% {
+        background-image: url('./assets/002.png');
+        transform: scale(1);
+    }
+
+    41% {
+        background-image: url('./assets/002.png');
+        transform: scale(1.2);
+    }
+
+    43% {
+        background-image: url('./assets/002.png');
+        transform: scale(1);
+    }
+
+    46% {
+        background-image: url('./assets/002.png');
+        transform: scale(1.2);
+    }
+
+    49% {
+        background-image: url('./assets/002.png');
+        background-repeat: none;
+        transform: scale(1);
+    }
+
+    60% {
+        background-image: url('./assets/002.png');
+        background-repeat: none;
+        background-size: cover;
+        transform: translateX(1000px);
+    }
+
+    61% {
+        background-image: url('./assets/003.png');
+        transform: translateX(1000px);
+    }
+
+    100% {
+        background-image: url('./assets/003.png');
+        transform: translateX(0);
+    }
+}
+
+@keyframes progressAnimation {
+    0% {
+        width: 5%;
+        background-color: #F9BCCA;
+    }
+
+    85% {
+        width: 85%;
+        background-color: #EF476F;
+    }
+
+    100% {
+        width: 100%;
+        background-color: #f0d972;
+    }
+}
